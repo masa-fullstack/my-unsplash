@@ -81,7 +81,7 @@ $ cd my-unsplash
 
 ```
 
-Then, you update "./app/.env.development.template" and rename ".env.development.local".
+Then, you update "./app/.env.development.local.template" and rename ".env.development.local".
 
 ```bash
 
