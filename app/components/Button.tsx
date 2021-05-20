@@ -11,7 +11,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 const Button: React.FC<Props> = (props) => {
   const { type, color, ...inputProps } = props
 
-  let className = 'xs:py-4 xs:px-6 py-2 px-4 rounded-xl shadow-lg text-sm'
+  let className = 'xs:py-4 xs:px-6 py-4 px-2 rounded-xl shadow-lg text-sm'
   switch (color) {
     case 'primary':
       className += ' bg-green-500 text-white'

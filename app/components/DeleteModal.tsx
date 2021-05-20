@@ -6,7 +6,6 @@ import Button from './Button'
 import axios from 'axios'
 import { Loading } from './Loading'
 import { AfterDelete } from './hooks/useImage'
-import useModalStyle from './hooks/useModalStyle'
 
 type Props = {
   hideModal: () => void
@@ -20,7 +19,6 @@ type Inputs = {
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#__next')
-const { customStyles } = useModalStyle({ height: '300px' })
 
 const DeleteModal: React.FC<Props> = (props) => {
   const {
@@ -63,9 +61,10 @@ const DeleteModal: React.FC<Props> = (props) => {
     <>
       <Modal
         isOpen
-        style={customStyles}
         onRequestClose={props.hideModal}
         shouldCloseOnOverlayClick={true}
+        className="Modal ModalSm"
+        overlayClassName="Overlay"
       >
         {isLoading && (
           <div className="flex justify-center items-center h-full">
@@ -74,7 +73,7 @@ const DeleteModal: React.FC<Props> = (props) => {
         )}
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="p-5">
+          <div className="p-10">
             <div className="text-2xl mb-5">Are you sure?</div>
             <div className="mb-8">
               <Input

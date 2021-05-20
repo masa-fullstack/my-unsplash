@@ -33,5 +33,40 @@
     .wrapper:hover .wrapper__img {
       opacity: 50%;
     }
+
+    .Overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .Modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      bottom: auto;
+      background-color: rgba(255, 255, 255, 1);
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      border-radius: 30px;
+      border-color: white;
+      overflow: hidden;
+      height: 400px;
+      width: 500px;
+    }
+    .ModalSm {
+      height: 300px;
+    }
+
+    @media screen and (max-width: 640px) {
+      .Modal {
+        width: 350px;
+      }
+    }
   }
 }

@@ -19,7 +19,7 @@ export const Header: React.FC<Props> = (props) => {
 
   return (
     <div className="container mx-auto flex justify-between items-center p-10">
-      <div className="xs:flex xs:items-center">
+      <div className="sm:flex sm:items-center">
         <div>
           <Image src="/my_unsplash_logo.svg" height={26} width={138} />
         </div>
@@ -36,7 +36,7 @@ export const Header: React.FC<Props> = (props) => {
           />
         </div>
       </div>
-      <div>
+      <div className="ml-2">
         <Button
           type="button"
           color="primary"
